@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -222,7 +219,6 @@ const App: React.FC = () => {
       const result: ImageGenerationResult = await generateImageFromPrompt(imagePrompt);
       if (result.imageUrls && result.imageUrls.length > 0) {
         setGeneratedImageUrls(result.imageUrls);
-        console.log(result, result,.imageUrls);
       } else { throw new Error("Image generation succeeded but returned no images."); }
       if (result.error) setError(`Image generation issue: ${result.error}`);
     } catch (e: any) {
