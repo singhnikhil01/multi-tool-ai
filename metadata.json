@@ -1,0 +1,8 @@
+{
+  "name": "Multi-Tool-AI",
+  "description": "An AI-powered application with tools to Paraphrase, Plan, Summarize Text, Generate Images, an AI Image Improver (generates an enhanced version of an uploaded image), and a Multimodal Chatbot (text, image, voice), powered by Google Gemini.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}
