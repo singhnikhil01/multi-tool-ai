@@ -85,7 +85,7 @@ const App: React.FC = () => {
             setError(msg + ' Please configure it and refresh.');
         }
     } else {
-        setApiKeyStatus('API_KEY detected. AI features should be operational.');
+        setApiKeyStatus('');
         if (error && error.includes('API_KEY')) { 
             setError(null);
         }
@@ -222,7 +222,7 @@ const App: React.FC = () => {
       const result: ImageGenerationResult = await generateImageFromPrompt(imagePrompt);
       if (result.imageUrls && result.imageUrls.length > 0) {
         setGeneratedImageUrls(result.imageUrls);
-        console.log(result, result.imageUrls);
+        console.log(result, result,.imageUrls);
       } else { throw new Error("Image generation succeeded but returned no images."); }
       if (result.error) setError(`Image generation issue: ${result.error}`);
     } catch (e: any) {
