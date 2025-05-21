@@ -14,8 +14,8 @@ const toolOptions: { value: ToolMode; label: string; icon: React.ElementType }[]
   { value: 'paraphraser', label: 'Paraphrase', icon: Wand2 },
   { value: 'planner', label: 'Planner', icon: ClipboardList }, 
   { value: 'summarizer', label: 'Summarize', icon: NotebookText },
-  { value: 'imageGenerator', label: 'Image Gen', icon: ImageIconLucide },
-  { value: 'imageImprover', label: 'Improve Image', icon: Paintbrush }, // Changed from Image Restore / Sparkles
+  // { value: 'imageGenerator', label: 'Image Gen', icon: ImageIconLucide },
+  // { value: 'imageImprover', label: 'Improve Image', icon: Paintbrush }, // Changed from Image Restore / Sparkles
 ];
 
 export const ToolModeSwitcher: React.FC<ToolModeSwitcherProps> = ({ currentMode, onModeChange, disabled }) => {

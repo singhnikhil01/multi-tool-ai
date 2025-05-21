@@ -73,7 +73,7 @@ const App: React.FC = () => {
   const [chatHistory, setChatHistory] = useState<ChatMessage[]>([]);
   const [isChatLoading, setIsChatLoading] = useState<boolean>(false);
   const chatSessionRef = useRef<Chat | null>(null);
-  const previousToolModeRef = useRef<ToolMode | undefined>();
+  const previousToolModeRef = useRef<ToolMode | undefined>(undefined);
 
   const apiKeyExists = !!process.env.API_KEY;
 
@@ -222,6 +222,7 @@ const App: React.FC = () => {
       const result: ImageGenerationResult = await generateImageFromPrompt(imagePrompt);
       if (result.imageUrls && result.imageUrls.length > 0) {
         setGeneratedImageUrls(result.imageUrls);
+        console.log(result, result.imageUrls);
       } else { throw new Error("Image generation succeeded but returned no images."); }
       if (result.error) setError(`Image generation issue: ${result.error}`);
     } catch (e: any) {

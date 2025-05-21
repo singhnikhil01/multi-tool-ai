@@ -3,7 +3,7 @@ import { ParaphraseMode } from './types';
 
 export const GEMINI_MODEL_TEXT = 'gemini-2.5-flash-preview-04-17';
 export const GEMINI_MODEL_CHAT = 'gemini-2.5-flash-preview-04-17';
-export const GEMINI_MODEL_IMAGE_GENERATION = 'imagen-3.0-generate-002';
+export const GEMINI_MODEL_IMAGE_GENERATION = 'imagen-2-google-ai-studio-free';
 
 export const PARAPHRASE_MODES: ParaphraseMode[] = [
   { 

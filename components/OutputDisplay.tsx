@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Copy, Check } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 interface OutputDisplayProps {
   text: string;
@@ -59,7 +60,7 @@ export const OutputDisplay: React.FC<OutputDisplayProps> = ({ text, isLoading, w
       <textarea
         id="output-text"
         rows={12}
-        className="w-full p-4 bg-slate-700 border border-slate-600 rounded-md text-gray-300 flex-grow resize-none"
+        className="w-full p-4 bg-slate-700 border border-slate-600 rounded-md text-gray-300 flex-grow resize-none chat-markdown-content"
         placeholder={isLoading ? `Generating ${title.toLowerCase()}...` : `Your ${title.toLowerCase()} will appear here...`}
         value={text}
         readOnly
